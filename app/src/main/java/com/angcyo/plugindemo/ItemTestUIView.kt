@@ -44,7 +44,7 @@ class ItemTestUIView : BaseItemUIView() {
                 return if (isInPlugin) {
                     L.e("Plugin: call: createItemView -> ")
                     TextView(mActivity).apply {
-                        text = "动态创建的TextView"
+                        text = "动态创建的TextView ${mPluginPackage.getString(R.string.app_name2)}"
                         setBackgroundColor(Color.RED)
                         //parent?.addView(this, ViewGroup.LayoutParams(-2, -2))
 
