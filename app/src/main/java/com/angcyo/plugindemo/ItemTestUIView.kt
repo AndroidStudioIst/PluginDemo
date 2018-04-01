@@ -46,7 +46,7 @@ class ItemTestUIView : BaseItemUIView() {
                     TextView(mActivity).apply {
                         text = "动态创建的TextView"
                         setBackgroundColor(Color.RED)
-                        parent?.addView(this, ViewGroup.LayoutParams(-2, -2))
+                        //parent?.addView(this, ViewGroup.LayoutParams(-2, -2))
 
                         T_.info("创建Item in $parent")
                     }
@@ -67,7 +67,7 @@ class ItemTestUIView : BaseItemUIView() {
 
             override fun createItemView(parent: ViewGroup?, viewType: Int): View? {
                 return if (isInPlugin) {
-                    mPluginPackage.inflate(mActivity, R.layout.item_test, parent)
+                    mPluginPackage.inflate(mActivity, R.layout.item_test, parent, false)
                 } else {
                     null
                 }
