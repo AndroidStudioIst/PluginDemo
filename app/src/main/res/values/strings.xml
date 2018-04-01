@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PluginDemo</string>
+    <string name="app_name2">PluginDemo From Res</string>
+</resources>
